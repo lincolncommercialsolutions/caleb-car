@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+:root {
+  /* Light Mode - Warm Off-White Theme */
+  --background: #FAF8F5;
+  --surface: #F5F3F0;
+  --text-primary: #1A1A1A;
+  --text-secondary: #6B6B6B;
+  --accent: #D4AF37;
+  --accent-hover: #C19B2E;
+  --border: #E5E3E0;
+}
+
+:root.dark {
+  /* Dark Mode - Deep Charcoal Theme */
+  --background: #0F0F0F;
+  --surface: #1C1C1C;
+  --text-primary: #FAFAFA;
+  --text-secondary: #9CA3AF;
+  --accent: #D4AF37;
+  --accent-hover: #E5C045;
+  --border: #2A2A2A;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-border: var(--border);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition-property: background-color, border-color, color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
