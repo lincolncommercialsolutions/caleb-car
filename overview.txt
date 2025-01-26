@@ -1,0 +1,189 @@
+Project Overview
+You're building a website for a high-end auto repair company that offers more than just repairs—think premium services like custom modifications, performance tuning, detailing, restoration, and perhaps concierge services. The site will use Next.js (with React) in JavaScript only (no TypeScript). We'll leverage Next.js's app router for modern routing and server-side capabilities.
+The core features include:
+
+Public pages: Home, Services, About, Contact (with form).
+Additional pages: Blog (for tips/articles), Gallery (showcasing work), Testimonials.
+Contact form: Submits data to an S3 bucket as a text file (e.g., .txt for human-readable format).
+Admin dashboard: Protected page to list and view contact submissions pulled from S3, displayed in a readable format (e.g., formatted text or tables, not raw JSON).
+AI Assistant: Integrate Claude (Anthropic API) as a chat widget for user queries (e.g., "What services do you offer for luxury cars?"). API key stored in .env.
+Security: Admin credentials and API keys in .env; use environment variables for AWS S3 access.
+
+This plan assumes you have an AWS account for S3 and an Anthropic account for Claude API. We'll use AWS SDK for Node.js to handle S3 interactions via Next.js API routes.
+Step 1: Project Setup
+
+Initialize Next.js Project:
+Run npx create-next-app@latest my-auto-site --javascript --eslint (choose app router when prompted).
+Install dependencies:
+AWS SDK: npm install @aws-sdk/client-s3
+For forms: No extra lib needed; use React hooks.
+For AI: npm install @anthropic-ai/sdk
+Other utils: npm install dotenv (for .env handling), npm install bcryptjs (for simple password hashing if needed), npm install react-hook-form (optional for form validation).
+For UI: Use Tailwind CSS (add during setup) or plain CSS for simplicity.
+
+
+Configure .env File:
+Create .env.local in root:textADMIN_USERNAME=youradmin
+ADMIN_PASSWORD=yoursecurepassword  # Hash this in code for security
+AWS_ACCESS_KEY_ID=yourkey
+AWS_SECRET_ACCESS_KEY=yoursecret
+AWS_S3_BUCKET_NAME=your-bucket-name  # Create a bucket in AWS S3
+AWS_REGION=us-east-1  # Or your region
+ANTHROPIC_API_KEY=your-claude-key
+In next.config.js, enable env vars if needed (Next.js handles them automatically).
+
+Basic Structure:
+Use /app directory for app router.
+Global layout in /app/layout.js for navbar/footer.
+Navbar: Links to Home, Services, About, Contact, Blog, Gallery, Testimonials.
+Footer: Company info, social links.
+
+
+Step 2: Implementing Public Pages
+All pages in /app as folders (e.g., /app/services/page.js).
+
+Home Page (/app/page.js):
+Hero section: High-end imagery, tagline like "Elevate Your Ride: Premium Auto Services Beyond Repairs".
+Sections: Featured services, testimonials carousel, call-to-action for contact.
+Use React components: Create /components/Hero.js, /components/Testimonials.js.
+
+Services Page (/app/services/page.js):
+List services: Repairs, Custom Mods, Performance Tuning, Detailing, Restoration, Concierge (e.g., pickup/dropoff).
+Grid layout with descriptions, prices if available, images.
+Component: /components/ServiceCard.js for reusable cards.
+
+About Page (/app/about/page.js):
+Company story, team bios, mission (e.g., "Specializing in luxury vehicles with 20+ years experience").
+Sections: History, Values, Certifications.
+
+Contact Page (/app/contact/page.js):
+Form: Fields for name, email, phone, message, service type (dropdown).
+Use React state/hooks for form handling.
+On submit: Send to Next.js API route (/app/api/submit-contact/route.js) which uploads to S3.
+Success/error messages.
+
+Other Pages:
+Blog (/app/blog/page.js): List articles; dynamic routes for individual posts (/app/blog/[slug]/page.js).
+Gallery (/app/gallery/page.js): Image grid of before/after projects.
+Testimonials (/app/testimonials/page.js): User reviews.
+
+
+Step 3: Contact Form and S3 Integration
+
+Form Implementation:
+In /app/contact/page.js:JavaScript'use client';
+import { useState } from 'react';
+
+export default function Contact() {
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '', service: '' });
+  const [status, setStatus] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const res = await fetch('/api/submit-contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+    });
+    if (res.ok) setStatus('Success!'); else setStatus('Error');
+  };
+
+  // Form JSX here...
+}
+
+API Route for S3 Upload (/app/api/submit-contact/route.js):
+Server-side: Convert form data to human-readable text (e.g., "Name: John\nEmail: john@example.com\n...").
+Upload as .txt file to S3 with unique filename (e.g., contact-${Date.now()}.txt).JavaScriptimport { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';
+
+const s3 = new S3Client({
+  region: process.env.AWS_REGION,
+  credentials: { accessKeyId: process.env.AWS_ACCESS_KEY_ID, secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY },
+});
+
+export async function POST(req) {
+  const data = await req.json();
+  const readableContent = `Name: ${data.name}\nEmail: ${data.email}\nPhone: ${data.phone}\nService: ${data.service}\nMessage: ${data.message}`;
+  
+  const params = {
+    Bucket: process.env.AWS_S3_BUCKET_NAME,
+    Key: `contacts/contact-${Date.now()}.txt`,
+    Body: readableContent,
+    ContentType: 'text/plain',
+  };
+
+  try {
+    await s3.send(new PutObjectCommand(params));
+    return new Response('Uploaded', { status: 200 });
+  } catch (err) {
+    return new Response('Error', { status: 500 });
+  }
+}
+
+
+Step 4: Admin Dashboard
+
+Protected Route (/app/admin/page.js):
+Client-side auth: Form for username/password, check against .env (hash password with bcryptjs for security).
+Use cookies or localStorage for session (simple; for production, use JWT).
+Once logged in: Fetch list of S3 files, display in table.
+For each file: Button to view content (fetch from S3 via API route).
+
+API Route for S3 Fetch (/app/api/admin-contacts/route.js):
+List objects: Use ListObjectsV2Command to get .txt files.
+Get object: Use GetObjectCommand to read content as string (already human-readable).JavaScriptimport { S3Client, ListObjectsV2Command, GetObjectCommand } from '@aws-sdk/client-s3';
+// Similar s3 setup as above...
+
+export async function GET(req) {
+  const { searchParams } = new URL(req.url);
+  const action = searchParams.get('action');
+  
+  if (action === 'list') {
+    const params = { Bucket: process.env.AWS_S3_BUCKET_NAME, Prefix: 'contacts/' };
+    const data = await s3.send(new ListObjectsV2Command(params));
+    return Response.json(data.Contents.map(obj => obj.Key));
+  } else if (action === 'get') {
+    const key = searchParams.get('key');
+    const params = { Bucket: process.env.AWS_S3_BUCKET_NAME, Key: key };
+    const data = await s3.send(new GetObjectCommand(params));
+    const body = await data.Body.transformToString();
+    return Response.json({ content: body });
+  }
+}
+In admin page: Use fetch('/api/admin-contacts?action=list') to get list, then fetch individual contents.
+
+Security Note: In production, add proper auth middleware (e.g., NextAuth.js) instead of simple env checks.
+
+Step 5: Claude AI Assistant Integration
+
+Chat Widget:
+Create /components/AIAssistant.js: Floating chat bubble on all pages (via layout.js).
+Use state for messages.
+On user input: Send to Next.js API route (/app/api/claude/route.js) which calls Anthropic API.
+
+API Route for Claude (/app/api/claude/route.js):JavaScriptimport { Anthropic } from '@anthropic-ai/sdk';
+
+const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+
+export async function POST(req) {
+  const { message } = await req.json();
+  try {
+    const response = await anthropic.messages.create({
+      model: 'claude-3-opus-20240229',  // Or your preferred model
+      max_tokens: 1000,
+      messages: [{ role: 'user', content: message }],
+    });
+    return Response.json({ reply: response.content[0].text });
+  } catch (err) {
+    return new Response('Error', { status: 500 });
+  }
+}
+Usage: Prompt Claude with context like "You are an assistant for a high-end auto repair company specializing in luxury services."
+
+Step 6: Testing and Deployment
+
+Local Testing: npm run dev. Test form submission (check S3 console), admin access, AI responses.
+Styling: Use CSS modules or Tailwind for responsive design (mobile-first).
+SEO: Add metadata in layout.js/pages.
+Deployment: Vercel (free for Next.js). Push to GitHub, connect to Vercel— it handles .env secrets.
+Edge Cases: Handle form validation, rate-limit AI calls, paginate admin list if many contacts.
+Timeline: Setup (1 day), Pages (2 days), Form/S3 (1 day), Admin (1 day), AI (1 day), Polish/Deploy (1 day).
