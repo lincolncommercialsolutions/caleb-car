@@ -54,7 +54,7 @@ export default function AIAssistant() {
       <button
         onClick={handleToggle}
         className="fixed bottom-6 right-6 bg-accent hover:bg-accent-hover text-white rounded-full p-4 shadow-2xl transition-all duration-300 z-50 hover:scale-110"
-        aria-label="Toggle AI Assistant">
+        aria-label="Toggle AI Assistant"
       >
         {isOpen ? (
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

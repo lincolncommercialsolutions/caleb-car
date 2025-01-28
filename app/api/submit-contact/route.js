@@ -1,10 +1,10 @@
 import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';
 
 const s3 = new S3Client({
-  region: process.env.AWS_REGION,
+  region: process.env.REGION,
   credentials: {
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+    accessKeyId: process.env.ACCESS_KEY_ID,
+    secretAccessKey: process.env.SECRET_ACCESS_KEY,
   },
 });
 
@@ -40,7 +40,7 @@ ${data.message}
     const sanitizedName = data.name.replace(/[^a-zA-Z0-9]/g, '_').substring(0, 30);
     
     const params = {
-      Bucket: process.env.AWS_S3_BUCKET_NAME,
+      Bucket: process.env.S3_BUCKET_NAME,
       Key: `contacts/contact-${timestamp}-${sanitizedName}.txt`,
       Body: readableContent,
       ContentType: 'text/plain',

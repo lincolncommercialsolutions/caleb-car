@@ -1,10 +1,10 @@
 import { S3Client, ListObjectsV2Command, GetObjectCommand, GetObjectTaggingCommand } from '@aws-sdk/client-s3';
 
 const s3 = new S3Client({
-  region: process.env.AWS_REGION,
+  region: process.env.REGION,
   credentials: {
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+    accessKeyId: process.env.ACCESS_KEY_ID,
+    secretAccessKey: process.env.SECRET_ACCESS_KEY,
   },
 });
 
@@ -15,7 +15,7 @@ export async function GET(req) {
 
     if (action === 'list') {
       const params = {
-        Bucket: process.env.AWS_S3_BUCKET_NAME,
+        Bucket: process.env.S3_BUCKET_NAME,
         Prefix: 'contacts/',
       };
       
@@ -33,7 +33,7 @@ export async function GET(req) {
         data.Contents.map(async (obj) => {
           try {
             const tagData = await s3.send(new GetObjectTaggingCommand({
-              Bucket: process.env.AWS_S3_BUCKET_NAME,
+              Bucket: process.env.S3_BUCKET_NAME,
               Key: obj.Key,
             }));
             const categoryTag = tagData.TagSet?.find(tag => tag.Key === 'Category');
@@ -59,7 +59,7 @@ export async function GET(req) {
     } else if (action === 'get') {
       const key = searchParams.get('key');
       const params = {
-        Bucket: process.env.AWS_S3_BUCKET_NAME,
+        Bucket: process.env.S3_BUCKET_NAME,
         Key: key,
       };
       
