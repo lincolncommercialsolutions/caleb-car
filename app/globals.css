@@ -1,24 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  /* Light Mode - Warm Off-White Theme */
-  --background: #FAF8F5;
-  --surface: #F5F3F0;
+  /* Light Mode - Clean White Theme */
+  --background: #FFFFFF;
+  --surface: #F8F9FA;
   --text-primary: #1A1A1A;
   --text-secondary: #6B6B6B;
-  --accent: #D4AF37;
-  --accent-hover: #C19B2E;
-  --border: #E5E3E0;
+  --accent: #DC2626;
+  --accent-hover: #B91C1C;
+  --border: #E5E7EB;
 }
 
 :root.dark {
-  /* Dark Mode - Deep Charcoal Theme */
-  --background: #0F0F0F;
-  --surface: #1C1C1C;
-  --text-primary: #FAFAFA;
+  /* Dark Mode - Deep Black Theme */
+  --background: #000000;
+  --surface: #1A1A1A;
+  --text-primary: #FFFFFF;
   --text-secondary: #9CA3AF;
-  --accent: #D4AF37;
-  --accent-hover: #E5C045;
+  --accent: #EF4444;
+  --accent-hover: #DC2626;
   --border: #2A2A2A;
 }
 
