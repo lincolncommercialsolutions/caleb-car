@@ -4,23 +4,23 @@ import { useState } from 'react';
 const testimonials = [
   {
     id: 1,
-    name: "Michael Thompson",
-    vehicle: "Porsche 911 Turbo",
-    text: "Exceptional service! The performance tuning transformed my car completely. The attention to detail is unmatched.",
+    name: "James Patterson",
+    vehicle: "Porsche 911 GT3",
+    text: "The team at CalebCar delivered beyond my expectations. Their precision tuning unlocked performance I didn't know was possible.",
     rating: 5
   },
   {
     id: 2,
-    name: "Sarah Chen",
-    vehicle: "BMW M5",
-    text: "Best auto service I've ever experienced. The team's expertise with luxury vehicles is evident in every detail.",
+    name: "Rebecca Martinez",
+    vehicle: "BMW M3 Competition",
+    text: "Traveled from Chicago specifically for their expertise. Worth every mile. The craftsmanship speaks for itself.",
     rating: 5
   },
   {
     id: 3,
-    name: "David Rodriguez",
-    vehicle: "Mercedes-AMG GT",
-    text: "From custom mods to detailing, they exceeded all expectations. My car has never looked or performed better!",
+    name: "Thomas Anderson",
+    vehicle: "Mercedes-AMG C63",
+    text: "Professional, knowledgeable, and meticulous. My car has never looked or performed this well. Highly recommended.",
     rating: 5
   }
 ];

@@ -3,22 +3,23 @@ export default function About() {
     <div className="min-h-screen bg-background">
       <div className="bg-gradient-to-br from-surface via-background to-surface py-12 sm:py-16 md:py-20 border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 text-text-primary">About CalebCar</h1>
-          <p className="text-lg sm:text-xl text-text-secondary">Excellence in automotive craft since 2004</p>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 text-accent">About CalebCar</h1>
+          <p className="text-lg sm:text-xl text-text-secondary">Automotive excellence from Southwest Michigan to the world</p>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="bg-surface rounded-xl shadow-xl p-8 mb-8 border border-border">
-          <h2 className="text-3xl font-bold mb-4 text-text-primary">Our Story</h2>
+          <h2 className="text-3xl font-bold mb-4 text-accent">Our Story</h2>
           <p className="text-text-secondary mb-4 leading-relaxed">
-            Founded in 2004, CalebCar has redefined the art of automotive performance and customization. 
-            What began as an obsession with high-performance engineering has evolved into an elite atelier 
-            specializing in bespoke modifications, precision tuning, and masterful restoration work.
+            Based in Southwest Michigan, CalebCar has built a reputation for exceptional automotive craftsmanship 
+            that extends far beyond the Great Lakes region. Our facility serves passionate enthusiasts from across 
+            the United States and around the world who demand nothing less than perfection.
           </p>
           <p className="text-text-secondary leading-relaxed">
-            Our team of master technicians brings together decades of combined experience, working exclusively with 
-            discerning enthusiasts who demand nothing less than perfection from their Porsche, BMW, Mercedes-Benz, Audi, and exotic marques.
+            Our team of expert technicians specializes in high-performance and luxury vehicles, working with brands 
+            like Porsche, BMW, Mercedes-Benz, Audi, Ferrari, and McLaren. Every project receives meticulous attention, 
+            whether it's a local enthusiast or an international client shipping their prized vehicle to our doors.
           </p>
         </div>
 

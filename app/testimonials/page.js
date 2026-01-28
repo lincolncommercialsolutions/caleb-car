@@ -3,33 +3,33 @@ import Testimonials from '@/components/Testimonials';
 export default function TestimonialsPage() {
   const allTestimonials = [
     {
-      name: "Michael Thompson",
-      vehicle: "Porsche 911 Turbo",
-      text: "Exceptional service! The performance tuning transformed my car completely. The attention to detail is unmatched.",
+      name: "James Patterson",
+      vehicle: "Porsche 911 GT3",
+      text: "The team at CalebCar delivered beyond my expectations. Their precision tuning unlocked performance I didn't know was possible.",
       rating: 5
     },
     {
-      name: "Sarah Chen",
-      vehicle: "BMW M5",
-      text: "Best auto service I've ever experienced. The team's expertise with luxury vehicles is evident in every detail.",
+      name: "Rebecca Martinez",
+      vehicle: "BMW M3 Competition",
+      text: "Traveled from Chicago specifically for their expertise. Worth every mile. The craftsmanship speaks for itself.",
       rating: 5
     },
     {
-      name: "David Rodriguez",
-      vehicle: "Mercedes-AMG GT",
-      text: "From custom mods to detailing, they exceeded all expectations. My car has never looked or performed better!",
+      name: "Thomas Anderson",
+      vehicle: "Mercedes-AMG C63",
+      text: "Professional, knowledgeable, and meticulous. My car has never looked or performed this well. Highly recommended.",
       rating: 5
     },
     {
-      name: "Jennifer Williams",
-      vehicle: "Audi RS7",
-      text: "Outstanding restoration work on my classic car. They brought it back to life beyond my expectations.",
+      name: "Jennifer Walsh",
+      vehicle: "Audi RS6 Avant",
+      text: "Drove from Detroit for their ceramic coating service. The attention to detail is extraordinary. Paint looks flawless.",
       rating: 5
     },
     {
-      name: "Robert Kim",
-      vehicle: "Ferrari 488",
-      text: "The concierge service is incredibly convenient. They picked up my car, serviced it, and returned it spotless!",
+      name: "Christopher Lee",
+      vehicle: "McLaren 720S",
+      text: "The engineering expertise here is world-class. They understand high-performance vehicles at a level few shops can match.",
       rating: 5
     }
   ];
@@ -38,8 +38,8 @@ export default function TestimonialsPage() {
     <div className="min-h-screen bg-background">
       <div className="bg-gradient-to-br from-surface via-background to-surface py-12 sm:py-16 md:py-20 border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 text-text-primary">Testimonials</h1>
-          <p className="text-lg sm:text-xl text-text-secondary">What our clients say about us</p>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 text-accent">Testimonials</h1>
+          <p className="text-lg sm:text-xl text-text-secondary">What our clients say</p>
         </div>
       </div>
 

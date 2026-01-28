@@ -42,18 +42,15 @@ export default function Hero() {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16 sm:py-24 md:py-32">
         <div className="text-center">
-          <div className="inline-block mb-3 sm:mb-4 px-3 sm:px-4 py-1.5 sm:py-2 bg-accent bg-opacity-10 rounded-full">
-            <span className="text-accent font-semibold text-xs sm:text-sm tracking-wide uppercase">Excellence Since 2004</span>
-          </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 text-text-primary leading-tight">
-            Drive <span className="text-accent">Perfection</span>
+            Precision <span className="text-accent">Engineering</span>
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-6 sm:mb-8 text-text-secondary font-light">
-            Where Luxury Meets Performance
+            Automotive Excellence from Southwest Michigan
           </p>
           <p className="text-base sm:text-lg mb-8 sm:mb-10 text-text-secondary max-w-2xl mx-auto leading-relaxed px-4">
-            Your premier destination for luxury automotive excellence. From precision engineering to bespoke customization, 
-            we transform your vision into reality with two decades of masterful craftsmanship.
+            World-class automotive customization, performance tuning, and restoration services. 
+            From our facility in Southwest Michigan, we serve passionate enthusiasts across the globe.
           </p>
           <div className="flex gap-3 sm:gap-4 justify-center flex-wrap px-4">
             <a 
