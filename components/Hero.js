@@ -40,31 +40,31 @@ export default function Hero() {
       {/* Overlay gradient */}
       <div className="absolute inset-0 bg-accent opacity-5 z-[1]"></div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16 sm:py-24 md:py-32">
         <div className="text-center">
-          <div className="inline-block mb-4 px-4 py-2 bg-accent bg-opacity-10 rounded-full">
-            <span className="text-accent font-semibold text-sm tracking-wide uppercase">Excellence Since 2004</span>
+          <div className="inline-block mb-3 sm:mb-4 px-3 sm:px-4 py-1.5 sm:py-2 bg-accent bg-opacity-10 rounded-full">
+            <span className="text-accent font-semibold text-xs sm:text-sm tracking-wide uppercase">Excellence Since 2004</span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-text-primary">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 text-text-primary leading-tight">
             Drive <span className="text-accent">Perfection</span>
           </h1>
-          <p className="text-xl md:text-3xl mb-8 text-text-secondary font-light">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-6 sm:mb-8 text-text-secondary font-light">
             Where Luxury Meets Performance
           </p>
-          <p className="text-lg mb-10 text-text-secondary max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg mb-8 sm:mb-10 text-text-secondary max-w-2xl mx-auto leading-relaxed px-4">
             Your premier destination for luxury automotive excellence. From precision engineering to bespoke customization, 
             we transform your vision into reality with two decades of masterful craftsmanship.
           </p>
-          <div className="flex gap-4 justify-center flex-wrap">
+          <div className="flex gap-3 sm:gap-4 justify-center flex-wrap px-4">
             <a 
               href="/services" 
-              className="bg-accent hover:bg-accent-hover text-white font-semibold px-8 py-4 rounded-lg transition shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              className="bg-accent hover:bg-accent-hover text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-lg transition shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-sm sm:text-base"
             >
               Explore Services
             </a>
             <a 
               href="/contact" 
-              className="bg-surface border-2 border-accent hover:bg-accent hover:text-white text-text-primary font-semibold px-8 py-4 rounded-lg transition shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              className="bg-surface border-2 border-accent hover:bg-accent hover:text-white text-text-primary font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-lg transition shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-sm sm:text-base"
             >
               Get Started
             </a>

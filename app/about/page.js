@@ -1,10 +1,10 @@
 export default function About() {
   return (
     <div className="min-h-screen bg-background">
-      <div className="bg-gradient-to-br from-surface via-background to-surface py-20 border-b border-border">
+      <div className="bg-gradient-to-br from-surface via-background to-surface py-12 sm:py-16 md:py-20 border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl font-bold mb-4 text-text-primary">About Us</h1>
-          <p className="text-xl text-text-secondary">Excellence in automotive care since 2004</p>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 text-text-primary">About CalebCar</h1>
+          <p className="text-lg sm:text-xl text-text-secondary">Excellence in automotive craft since 2004</p>
         </div>
       </div>
 

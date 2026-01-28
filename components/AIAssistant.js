@@ -53,7 +53,7 @@ export default function AIAssistant() {
       {/* Chat Bubble Button */}
       <button
         onClick={handleToggle}
-        className="fixed bottom-6 right-6 bg-accent hover:bg-accent-hover text-white rounded-full p-4 shadow-2xl transition-all duration-300 z-50 hover:scale-110"
+        className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 bg-accent hover:bg-accent-hover text-white rounded-full p-3 sm:p-4 shadow-2xl transition-all duration-300 z-50 hover:scale-110 active:scale-95"
         aria-label="Toggle AI Assistant"
       >
         {isOpen ? (
@@ -69,13 +69,20 @@ export default function AIAssistant() {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-24 right-6 w-96 h-[500px] bg-surface rounded-xl shadow-2xl flex flex-col z-50 border border-border">
-          <div className="bg-accent text-white p-4 rounded-t-xl">
-            <h3 className="font-semibold">AI Assistant</h3>
-            <p className="text-sm text-white text-opacity-90">Ask me about our services!</p>
+        <div className="fixed bottom-20 sm:bottom-24 right-2 sm:right-6 w-[calc(100vw-1rem)] sm:w-96 max-w-md h-[70vh] sm:h-[500px] bg-surface rounded-xl shadow-2xl flex flex-col z-50 border border-border">
+          <div className="bg-accent text-white p-3 sm:p-4 rounded-t-xl flex justify-between items-center">
+            <div>
+              <h3 className="font-semibold text-sm sm:text-base">AI Assistant</h3>
+              <p className="text-xs sm:text-sm text-white text-opacity-90">Ask me about our services!</p>
+            </div>
+            <button onClick={() => setIsOpen(false)} className="sm:hidden text-white hover:bg-white hover:bg-opacity-20 rounded p-1">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
           </div>
           
-          <div className="flex-1 overflow-y-auto p-4 space-y-4">
+          <div className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4">
             {messages.map((msg, idx) => (
               <div key={idx} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                 <div className={`max-w-[80%] p-3 rounded-lg ${
@@ -96,7 +103,7 @@ export default function AIAssistant() {
             )}
           </div>
 
-          <div className="p-4 border-t border-border">
+          <div className="p-3 sm:p-4 border-t border-border">
             <div className="flex gap-2">
               <input
                 type="text"
@@ -104,13 +111,13 @@ export default function AIAssistant() {
                 onChange={(e) => setInput(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && sendMessage()}
                 placeholder="Type your message..."
-                className="flex-1 border border-border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-accent bg-background text-text-primary"
+                className="flex-1 border border-border rounded-lg px-3 sm:px-4 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-accent bg-background text-text-primary"
                 disabled={isLoading}
               />
               <button
                 onClick={sendMessage}
                 disabled={isLoading}
-                className="bg-accent hover:bg-accent-hover text-white px-4 py-2 rounded-lg transition disabled:opacity-50 shadow-lg"
+                className="bg-accent hover:bg-accent-hover text-white px-3 sm:px-4 py-2 rounded-lg transition disabled:opacity-50 shadow-lg text-sm sm:text-base"
               >
                 Send
               </button>
