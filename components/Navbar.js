@@ -16,12 +16,12 @@ export default function Navbar() {
           
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-text-primary hover:text-accent transition font-medium">Home</Link>
-            <Link href="/services" className="text-text-primary hover:text-accent transition font-medium">Services</Link>
-            <Link href="/about" className="text-text-primary hover:text-accent transition font-medium">About</Link>
-            <Link href="/gallery" className="text-text-primary hover:text-accent transition font-medium">Gallery</Link>
-            <Link href="/blog" className="text-text-primary hover:text-accent transition font-medium">Blog</Link>
-            <Link href="/testimonials" className="text-text-primary hover:text-accent transition font-medium">Testimonials</Link>
+            <Link href="/" className="text-white hover:text-accent transition font-medium">Home</Link>
+            <Link href="/services" className="text-white hover:text-accent transition font-medium">Services</Link>
+            <Link href="/about" className="text-white hover:text-accent transition font-medium">About</Link>
+            <Link href="/gallery" className="text-white hover:text-accent transition font-medium">Gallery</Link>
+            <Link href="/blog" className="text-white hover:text-accent transition font-medium">Blog</Link>
+            <Link href="/testimonials" className="text-white hover:text-accent transition font-medium">Testimonials</Link>
             <Link href="/contact" className="px-4 py-2 bg-accent hover:bg-accent-hover text-white rounded-lg transition font-semibold shadow-lg">
               Contact
             </Link>
@@ -33,7 +33,7 @@ export default function Navbar() {
             <ThemeToggle />
             <button 
               onClick={() => setIsOpen(!isOpen)}
-              className="text-text-primary"
+              className="text-white"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {isOpen ? (
@@ -49,12 +49,12 @@ export default function Navbar() {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden pb-4 border-t border-border mt-2 pt-4">
-            <Link href="/" className="block py-2 text-text-primary hover:text-accent transition font-medium">Home</Link>
-            <Link href="/services" className="block py-2 text-text-primary hover:text-accent transition font-medium">Services</Link>
-            <Link href="/about" className="block py-2 text-text-primary hover:text-accent transition font-medium">About</Link>
-            <Link href="/gallery" className="block py-2 text-text-primary hover:text-accent transition font-medium">Gallery</Link>
-            <Link href="/blog" className="block py-2 text-text-primary hover:text-accent transition font-medium">Blog</Link>
-            <Link href="/testimonials" className="block py-2 text-text-primary hover:text-accent transition font-medium">Testimonials</Link>
+            <Link href="/" className="block py-2 text-white hover:text-accent transition font-medium">Home</Link>
+            <Link href="/services" className="block py-2 text-white hover:text-accent transition font-medium">Services</Link>
+            <Link href="/about" className="block py-2 text-white hover:text-accent transition font-medium">About</Link>
+            <Link href="/gallery" className="block py-2 text-white hover:text-accent transition font-medium">Gallery</Link>
+            <Link href="/blog" className="block py-2 text-white hover:text-accent transition font-medium">Blog</Link>
+            <Link href="/testimonials" className="block py-2 text-white hover:text-accent transition font-medium">Testimonials</Link>
             <Link href="/contact" className="block py-2 mt-2 px-4 bg-accent hover:bg-accent-hover text-white rounded-lg transition font-semibold text-center">
               Contact
             </Link>
