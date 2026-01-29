@@ -19,7 +19,7 @@ For our clients across the globe who ship their vehicles to our facility, we off
       title: "Performance Tuning: Unlocking Your Vehicle's Hidden Potential",
       excerpt: "Modern luxury vehicles are engineering marvels, yet manufacturers often limit their true capabilities. Learn how our precision ECU tuning, exhaust upgrades, and suspension enhancements can transform your driving experience while maintaining reliability.",
       date: "January 8, 2025",
-      author: "CalebCar Team",
+      author: "CB PRECISION AUTO Team",
       content: `Every luxury performance vehicle leaves the factory with untapped potential. Manufacturers must balance global emissions standards, fuel economy requirements, and broad market appeal—often at the expense of pure performance. At CB PRECISION AUTO, we specialize in unlocking this hidden capability through precision engineering.
 
 ECU tuning forms the foundation of any performance upgrade. Using proprietary software, we optimize fuel maps, boost pressure, and ignition timing to extract significant horsepower and torque gains. A typical BMW M3, for instance, can gain 50-80 HP with tuning alone—all while improving throttle response and maintaining factory reliability.
