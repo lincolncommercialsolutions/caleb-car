@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const images = ['/car13.png', '/car27.png', '/car54.png'];
+  const images = ['/slideshow/911custom.jpeg', '/slideshow/custom-modifications.jpeg', '/slideshow/head1.jpeg', '/slideshow/head3.jpeg'];
 
   useEffect(() => {
     const interval = setInterval(() => {
