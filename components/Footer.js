@@ -22,12 +22,12 @@ export default function Footer() {
           </div>
           <div>
             <h3 className="text-xl font-bold mb-4 text-text-primary">Contact Info</h3>
-            <p className="text-text-secondary">Email: info@calebcar.com</p>
+            <p className="text-text-secondary">Email: info@cbprecisionauto.com</p>
             <p className="text-text-secondary">Phone: (555) 123-4567</p>
           </div>
         </div>
         <div className="border-t border-border mt-8 pt-8 text-center text-text-secondary">
-          <p>&copy; {new Date().getFullYear()} CalebCar. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} CB PRECISION AUTO. All rights reserved.</p>
         </div>
       </div>
     </footer>

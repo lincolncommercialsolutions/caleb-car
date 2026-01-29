@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "CalebCar - Drive Perfection",
+  title: "CB PRECISION AUTO - Precision Engineering",
   description: "Where luxury meets performance - bespoke automotive excellence",
 };
 

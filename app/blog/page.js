@@ -4,7 +4,7 @@ export default function Blog() {
       title: "The Art of Paint Correction: Restoring Your Vehicle's True Beauty",
       excerpt: "Discover how our multi-stage paint correction process removes years of imperfections and reveals the mirror-like finish your luxury vehicle deserves. From swirl mark removal to ceramic coating application, learn why proper paint care is an investment in your vehicle's longevity.",
       date: "January 15, 2025",
-      author: "CalebCar Team",
+      author: "CB PRECISION AUTO Team",
       content: `Paint correction is far more than a simple wash and wax—it's a meticulous science that requires expert technique and premium products. At our Southwest Michigan facility, we employ a comprehensive multi-stage process that addresses everything from minor swirl marks to deep scratches.
 
 The journey begins with a thorough decontamination wash using pH-neutral soaps and clay bar treatment to remove embedded contaminants. Next, we assess the paint condition under high-intensity lighting to identify defects invisible to the naked eye.
@@ -20,7 +20,7 @@ For our clients across the globe who ship their vehicles to our facility, we off
       excerpt: "Modern luxury vehicles are engineering marvels, yet manufacturers often limit their true capabilities. Learn how our precision ECU tuning, exhaust upgrades, and suspension enhancements can transform your driving experience while maintaining reliability.",
       date: "January 8, 2025",
       author: "CalebCar Team",
-      content: `Every luxury performance vehicle leaves the factory with untapped potential. Manufacturers must balance global emissions standards, fuel economy requirements, and broad market appeal—often at the expense of pure performance. At CalebCar, we specialize in unlocking this hidden capability through precision engineering.
+      content: `Every luxury performance vehicle leaves the factory with untapped potential. Manufacturers must balance global emissions standards, fuel economy requirements, and broad market appeal—often at the expense of pure performance. At CB PRECISION AUTO, we specialize in unlocking this hidden capability through precision engineering.
 
 ECU tuning forms the foundation of any performance upgrade. Using proprietary software, we optimize fuel maps, boost pressure, and ignition timing to extract significant horsepower and torque gains. A typical BMW M3, for instance, can gain 50-80 HP with tuning alone—all while improving throttle response and maintaining factory reliability.
 
@@ -36,7 +36,7 @@ Whether you seek an additional 100 HP for daily driving or a full race-spec buil
       title: "Classic Car Restoration: Preserving Automotive Heritage",
       excerpt: "Restoring a classic vehicle to concours condition requires more than mechanical skill—it demands passion, patience, and reverence for automotive history. Explore our restoration philosophy and the painstaking process that brings legendary vehicles back to their former glory.",
       date: "December 28, 2024",
-      author: "CalebCar Team",
+      author: "CB PRECISION AUTO Team",
       content: `Classic car restoration is where art meets engineering. At our Southwest Michigan workshop, we approach each restoration project as a curator would a masterpiece—with meticulous research, period-correct sourcing, and uncompromising attention to authenticity.
 
 The process begins with comprehensive documentation. We photograph and catalog every component during disassembly, creating a roadmap for the rebuild. Frames are media-blasted to bare metal, revealing rust or damage invisible under decades of paint. Engine blocks are hot-tanked and measured to factory specifications, with worn components either restored or replaced with NOS (New Old Stock) parts.

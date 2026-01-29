@@ -4,7 +4,7 @@ const anthropic = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
 });
 
-const systemPrompt = `You are a knowledgeable AI concierge for CalebCar, an elite automotive performance and customization atelier specializing in luxury and high-performance vehicles. 
+const systemPrompt = `You are a knowledgeable AI concierge for CB PRECISION AUTO, an elite automotive performance and customization atelier specializing in luxury and high-performance vehicles. 
 
 Our services include:
 - Bespoke Customization: Precision-crafted modifications and personalized touches

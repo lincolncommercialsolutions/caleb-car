@@ -3,7 +3,7 @@ export default function About() {
     <div className="min-h-screen bg-background">
       <div className="bg-gradient-to-br from-surface via-background to-surface py-12 sm:py-16 md:py-20 border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 text-accent">About CalebCar</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 text-accent">About CB PRECISION AUTO</h1>
           <p className="text-lg sm:text-xl text-text-secondary">Automotive excellence from Southwest Michigan to the world</p>
         </div>
       </div>
@@ -12,7 +12,7 @@ export default function About() {
         <div className="bg-surface rounded-xl shadow-xl p-8 mb-8 border border-border">
           <h2 className="text-3xl font-bold mb-4 text-accent">Our Story</h2>
           <p className="text-text-secondary mb-4 leading-relaxed">
-            Based in Southwest Michigan, CalebCar has built a reputation for exceptional automotive craftsmanship 
+            Based in Southwest Michigan, CB PRECISION AUTO has built a reputation for exceptional automotive craftsmanship 
             that extends far beyond the Great Lakes region. Our facility serves passionate enthusiasts from across 
             the United States and around the world who demand nothing less than perfection.
           </p>

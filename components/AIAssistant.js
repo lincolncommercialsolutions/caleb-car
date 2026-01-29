@@ -12,7 +12,7 @@ export default function AIAssistant() {
     if (!isOpen && messages.length === 0) {
       setMessages([{ 
         role: 'assistant', 
-        content: 'Welcome to CalebCar! I\'m here to answer questions about our services, pricing, and automotive expertise. How may I assist you today?' 
+        content: 'Welcome to CB PRECISION AUTO! I\'m here to answer questions about our services, pricing, and automotive expertise. How may I assist you today?' 
       }]);
     }
     setIsOpen(!isOpen);

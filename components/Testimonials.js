@@ -6,7 +6,7 @@ const testimonials = [
     id: 1,
     name: "James Patterson",
     vehicle: "Porsche 911 GT3",
-    text: "The team at CalebCar delivered beyond my expectations. Their precision tuning unlocked performance I didn't know was possible.",
+    text: "The team at CB PRECISION AUTO delivered beyond my expectations. Their precision tuning unlocked performance I didn't know was possible.",
     rating: 5
   },
   {
