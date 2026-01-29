@@ -43,14 +43,16 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16 sm:py-24 md:py-32">
         <div className="text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 text-text-primary leading-tight">
-            Precision <span className="text-accent">Engineering</span>
+            Precision Engineering
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-6 sm:mb-8 text-text-secondary font-light">
             Automotive Excellence from Southwest Michigan
           </p>
           <p className="text-base sm:text-lg mb-8 sm:mb-10 text-text-secondary max-w-2xl mx-auto leading-relaxed px-4">
-            World-class automotive customization, performance tuning, and restoration services. 
-            From our facility in Southwest Michigan, we serve passionate enthusiasts across the globe.
+            World-class automotive customization, performance tuning, and restoration—crafted with uncompromising precision.
+          </p>
+          <p className="text-base sm:text-lg mb-8 sm:mb-10 text-text-secondary max-w-2xl mx-auto leading-relaxed px-4">
+            From our state-of-the-art facility in Southwest Michigan, we deliver exceptional results to passionate enthusiasts around the globe.
           </p>
           <div className="flex gap-3 sm:gap-4 justify-center flex-wrap px-4">
             <a 

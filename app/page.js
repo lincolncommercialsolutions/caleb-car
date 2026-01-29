@@ -23,7 +23,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-3 text-text-primary group-hover:text-accent transition">Bespoke Customization</h3>
-              <p className="text-text-secondary">Bringing your unique automotive vision to life with precision-crafted modifications and personalized touches.</p>
+              <p className="text-text-secondary">We transform your unique vision into reality through meticulously crafted modifications, premium materials, and personalized details that reflect your exact style.</p>
             </div>
             <div className="p-8 bg-surface border border-border rounded-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
               <div className="w-16 h-16 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mb-4 group-hover:bg-accent transition-colors">
@@ -32,7 +32,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-3 text-text-primary group-hover:text-accent transition">Performance Engineering</h3>
-              <p className="text-text-secondary">Maximizing power, handling, and driving dynamics through cutting-edge tuning and enhancement solutions.</p>
+              <p className="text-text-secondary">Unlock maximum power, superior handling, and exhilarating dynamics with advanced tuning, engineered upgrades, and data-driven optimization.</p>
             </div>
             <div className="p-8 bg-surface border border-border rounded-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
               <div className="w-16 h-16 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mb-4 group-hover:bg-accent transition-colors">
@@ -41,7 +41,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-3 text-text-primary group-hover:text-accent transition">Concierge Detailing</h3>
-              <p className="text-text-secondary">Museum-quality paint correction, ceramic protection, and interior restoration that exceeds expectations.</p>
+              <p className="text-text-secondary">Museum-grade paint correction, long-lasting ceramic protection, and meticulous interior restoration—elevating your vehicle to a level that surpasses even the highest expectations.</p>
             </div>
           </div>
         </div>
