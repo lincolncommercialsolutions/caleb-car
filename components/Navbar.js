@@ -10,7 +10,7 @@ export default function Navbar() {
     <nav className="bg-surface border-b border-border shadow-sm sticky top-0 z-50 backdrop-blur-sm bg-opacity-95">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="text-2xl font-bold text-accent hover:text-accent-hover transition flex items-center gap-2">
+          <Link href="/" className="text-2xl font-bold text-accent hover:text-accent-hover transition flex items-center gap-2 mt-2">
             <img src="/CB Precision Auto.png" alt="CB PRECISION AUTO" className="h-40" />
           </Link>
           

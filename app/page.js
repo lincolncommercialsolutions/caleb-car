@@ -54,8 +54,8 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-br from-surface via-background to-surface relative overflow-hidden">
         <div className="absolute inset-0 bg-accent opacity-5"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-4xl font-bold mb-4 text-accent">Ready to Build Something Extraordinary?</h2>
-          <p className="text-xl mb-8 text-text-secondary">Schedule your consultation with our team today</p>
+          <h2 className="text-4xl font-bold mb-4 text-accent">Get a Quote Today</h2>
+          <p className="text-xl mb-8 text-text-secondary">Schedule your consultation with our team</p>
           <a 
             href="/contact" 
             className="inline-block bg-accent hover:bg-accent-hover text-white font-semibold px-10 py-4 rounded-lg transition shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
